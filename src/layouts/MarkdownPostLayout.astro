@@ -1,0 +1,13 @@
+---
+import BaseLayaout from "./BaseLayaout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayaout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <p>Escito por {frontmatter.author}</p>
+  <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+  <slot />
+</BaseLayaout>

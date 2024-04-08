@@ -1,22 +1,10 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayaout from "../layouts/BaseLayaout.astro";
 import "../styles/global.css";
 
 const pageTitle = "Inicio";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-    <h1>{pageTitle}</h1>
-    <Footer />
-  </body>
-</html>
+<BaseLayaout pageTitle={pageTitle}>
+  <h2>Mi impresionatntes subtitulo de blog</h2>
+</BaseLayaout>
