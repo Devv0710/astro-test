@@ -1,9 +1,12 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
 const pageTitle = "Inicio";
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,23 +15,8 @@ const pageTitle = "Inicio";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
-
+    <Navigation />
     <h1>{pageTitle}</h1>
-    <h2>... ¡y mi nuevo sitio Astro!</h2>
-    <h1>Astro</h1>
+    <Footer />
   </body>
 </html>
-<script>
-  const button = document.querySelector("button");
-  const span = document.querySelector("span");
-
-  function handleClick() {
-    let count = Number(span.textContent);
-    count = count + 1;
-    span.innerText = count.toString();
-  }
-  button.addEventListener("click", handleClick);
-</script>
